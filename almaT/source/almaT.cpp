@@ -1,12 +1,15 @@
-﻿// almaT.cpp: определяет точку входа для приложения.
-//
+﻿#include "almat.h"
+#include "ui_almat.h"
 
-#include "almaT.h"
-
-using namespace std;
-
-int main()
+almat::almat(QWidget* parent)
+    : QMainWindow(parent)
+    , ui(new Ui::almat)
 {
-	cout << "Hello CMake." << endl;
-	return 0;
+    ui->setupUi(this);
 }
+
+almat::~almat()
+{
+    delete ui;
+}
+

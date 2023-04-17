@@ -1,3 +1,6 @@
 almaT/lib/
 out/
 .vs
+.idea/
+
+CMakeLists.txt.user

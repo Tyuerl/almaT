@@ -1,5 +1,5 @@
-#ifndef ASDIC_M_VIEWER_VIEW_Table_VIEW_MODEL_H
-#define ASDIC_M_VIEWER_VIEW_Table_VIEW_MODEL_H
+#ifndef ALMA_T_Table_VIEW_MODEL_H
+#define ALMA_T_Table_VIEW_MODEL_H
  
 #include <QAbstractTableModel>
 #include <vector>
@@ -9,9 +9,6 @@
 #include <QSize>
 #include <QFont>    
 #include <memory>
-#include "core/api/search/itabreadonly.h"
-#include "core/source/search/examinationpreview.h"
-#include "core/source//search/ipersonreadonly.h"
 
 namespace viewer
 {
@@ -28,14 +25,14 @@ namespace viewer
             bool        canFetchMore(const QModelIndex& parent) const override;
             void        fetchMore(const QModelIndex& parent) override;
             QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
-            void setTabs(std::vector<std::shared_ptr<viewer::core::ExaminationPreview>>* mainTab);
+            /*void setTabs(std::vector<std::shared_ptr<viewer::core::ExaminationPreview>>* mainTab);*/
 
         private slots:
             void        loadMoreData();
             void        changeFocusedItem(const QModelIndex& index);
 
         protected:
-            std::vector<std::shared_ptr<viewer::core::ExaminationPreview>>* mExaminations = nullptr;
+            /*std::vector<std::shared_ptr<viewer::core::ExaminationPreview>>* mExaminations = nullptr;*/
             int mCurrentSize{ 0 };
             int mSelectedIndex{ -1 };
         };

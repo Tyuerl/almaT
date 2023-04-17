@@ -1,8 +1,21 @@
-﻿// almaT.h : включаемый файл для стандартных системных включаемых файлов
-// или включаемые файлы для конкретного проекта.
+﻿#ifndef ALMA_T_Almat_H
+#define ALMA_T_Almat_H
 
-#pragma once
+#include <QMainWindow>
 
-#include <iostream>
+QT_BEGIN_NAMESPACE
+namespace Ui { class almat; }
+QT_END_NAMESPACE
 
-// TODO: установите здесь ссылки на дополнительные заголовки, требующиеся для программы.
+class almat : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    almat(QWidget* parent = nullptr);
+    ~almat();
+
+private:
+    Ui::almat* ui;
+};
+#endif // ALMAT_H

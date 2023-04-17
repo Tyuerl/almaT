@@ -17,9 +17,10 @@ int TableViewModel::rowCount(const QModelIndex& parent) const
 {
 
     Q_UNUSED(parent);
-    if (!mExaminations)
+    /*if (!mExaminations)
         return 0;
-    return mExaminations->size();//*mExaminations->size();
+    return mExaminations->size();//*mExaminations->size();*/
+    return 5;
 }
 
 int TableViewModel::columnCount(const QModelIndex& parent) const
@@ -48,7 +49,7 @@ QVariant TableViewModel::data(const QModelIndex& index, int role) const
             return QColor(Qt::white);
     case Qt::DisplayRole:
     {
-            if (!mExaminations)
+        /*    if (!mExaminations)
                 return QVariant();
             if (index.row() >= mCurrentSize)
                 return QVariant();
@@ -78,7 +79,7 @@ QVariant TableViewModel::data(const QModelIndex& index, int role) const
                 return  QString::fromStdString(mExaminations->at(index.row()).get()->getId());
             default:
                 return QVariant();
-            }
+            }*/
         }
     default:
         return QVariant();
@@ -86,7 +87,7 @@ QVariant TableViewModel::data(const QModelIndex& index, int role) const
 
     return QVariant();
 }
-
+    /*
 void TableViewModel::setTabs(std::vector<std::shared_ptr<viewer::core::ExaminationPreview>>* mainTab)
 {
     mExaminations = mainTab;
@@ -106,7 +107,7 @@ void TableViewModel::setTabs(std::vector<std::shared_ptr<viewer::core::Examinati
     emit endInsertRows();
     mCurrentSize = countToAddExm;
 }
-
+*/
 bool TableViewModel::canFetchMore(const QModelIndex& parent) const
 {
     Q_UNUSED(parent);
@@ -123,7 +124,7 @@ void TableViewModel::loadMoreData()
 {
     int insertLen;
 
-    if (!mExaminations)
+    /*if (!mExaminations)
         return;
     if (mExaminations->size() == mCurrentSize)
         return;
@@ -134,7 +135,7 @@ void TableViewModel::loadMoreData()
 
     emit beginInsertRows(QModelIndex(), mCurrentSize, mCurrentSize + insertLen - 1);
     mCurrentSize += insertLen;
-    emit endInsertRows();
+    emit endInsertRows();*/
     
 }
 

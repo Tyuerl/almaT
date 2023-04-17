@@ -7,13 +7,19 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(CMAKE_PREFIX_PATH "almaT/lib/cpp/windows/x64/debug/qt/lib/cmake/Qt5")
-
-set(SOURCES  
-	source/almaT.cpp 
-	source/almaT.h)
+set(CMAKE_PREFIX_PATH "lib/cpp/windows/x64/debug/qt/lib/cmake/Qt5") # добавить выбор платформ систему и релиз
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
+
+set(SOURCES  
+	source/almaT.h
+	source/almaT.cpp
+	source/almaT.ui
+	source/tableviewmodel.h
+	source/tableviewmodel.cpp
+	source/main.cpp
+	)
+
 
 add_executable (${PROJECT_NAME} ${SOURCES})
 
