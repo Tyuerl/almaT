@@ -2,6 +2,12 @@
 #define ALMA_T_Almat_H
 
 #include <QMainWindow>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QUrlQuery>
+#include <QUrl>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class almat; }
