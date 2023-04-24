@@ -1,15 +1,4 @@
-﻿project(${PROJECT_PREFIX}_app)
-
-cmake_minimum_required (VERSION 3.14)
-
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(AUTOGEN_BUILD_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+project(${PROJECT_PREFIX}_cmake_helper)
 
 if(UNIX AND NOT APPLE)
     set(TARGET_BUILD_PLATFORM "linux")
@@ -37,9 +26,6 @@ else()
 endif()
 set(TARGET_PLATFORM_ARCHITECTURE "${TARGET_PLATFORM_ARCHITECTURE}" CACHE INTERNAL "")
 
-
-
-
 set(TARGET_SCRIPT_EXT "${TARGET_SCRIPT_EXT}" CACHE INTERNAL "")
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib" CACHE INTERNAL "")
 set(CPP_LIB_DIR "${LIB_DIR}/cpp/${TARGET_BUILD_PLATFORM}/${TARGET_PLATFORM_ARCHITECTURE}/${TARGET_BUILD_TYPE}" CACHE INTERNAL "")
@@ -59,32 +45,4 @@ foreach(library ${LIBRARY_LIST})
 endforeach()
 set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH}" CACHE INTERNAL "")
 
-
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
-
-set(SOURCES  
-	source/almaT.h
-	source/almaT.cpp
-	source/almaT.ui
-	source/tableviewmodel.h
-	source/tableviewmodel.cpp
-	source/main.cpp
-	)
-
-
-add_executable (${PROJECT_NAME} ${SOURCES})
-
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
-
-add_custom_command(TARGET ${PROJECT_NAME}
-    POST_BUILD
-    COMMAND	${SCRIPT_DIR}/copy.${TARGET_SCRIPT_EXT} ${CPP_LIB_DIR}/vc_runtime/*.dll ${CMAKE_CURRENT_BINARY_DIR}
-    COMMAND	${SCRIPT_DIR}/copy.${TARGET_SCRIPT_EXT} ${CPP_LIB_DIR}/qt/bin/*.dll ${CMAKE_CURRENT_BINARY_DIR}
-
-    COMMAND	${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/plugins
-    COMMAND	${SCRIPT_DIR}/copy.${TARGET_SCRIPT_EXT} ${CPP_LIB_DIR}/qt/plugins/* ${CMAKE_CURRENT_BINARY_DIR}/plugins
-
-    COMMAND	${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/settings
-)
-
-# TODO: Добавьте тесты и целевые объекты, если это необходимо.
+#set(CMAKE_PREFIX_PATH "${CPP_LIB_DIR}/qt/lib/cmake/Qt5" CACHE INTERNAL "")

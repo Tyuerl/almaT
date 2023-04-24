@@ -1,0 +1,119 @@
+{
+  "algo_list": [
+    {
+      "algo_id": 1,
+      "name": "Кашель",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 2,
+      "name": "Чихание",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 3,
+      "name": "Сердечный ритм",
+      "units": "уд.мин.",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 4,
+      "name": "Частота дыхания",
+      "units": "в мин.",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 5,
+      "name": "Поверхность дыхания",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 6,
+      "name": "Насыщенность кислородом",
+      "units": "%",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 7,
+      "name": "Артериальное давление",
+      "units": "",
+      "thresholds": "100/60*140/90"
+    },
+    {
+      "algo_id": 8,
+      "name": "Тремор рук",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 9,
+      "name": "Состояние шока",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 10,
+      "name": "Интенсвность стресса",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 11,
+      "name": "Расстройство моторики",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 12,
+      "name": "Мускульная усталость",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 13,
+      "name": "Дефекты мелкой моторики",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 14,
+      "name": "Неврологическое расстройство",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 15,
+      "name": "Тремор головы",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 16,
+      "name": "Положение тела",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 17,
+      "name": "Сильные удары",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 18,
+      "name": "Падения",
+      "units": "",
+      "thresholds": ""
+    },
+    {
+      "algo_id": 19,
+      "name": "Эмоции",
+      "units": "",
+      "thresholds": ""
+    }
+  ]
+
+}

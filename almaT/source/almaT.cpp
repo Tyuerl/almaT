@@ -6,6 +6,7 @@ almat::almat(QWidget* parent)
     , ui(new Ui::almat)
 {
     ui->setupUi(this);
+
 }
 
 almat::~almat()

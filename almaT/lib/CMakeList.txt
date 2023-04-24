@@ -1,1 +1,0 @@
-# set(CMAKE_PREFIX_PATH "almaT/lib/cpp/windows/x64/debug/qt/lib/cmake/Qt5")

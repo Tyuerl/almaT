@@ -3,8 +3,10 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("almaT")
+project ("almathea_desktop_viewer")
+
+set(PROJECT_PREFIX "almathea_desktop_viewer")
 
 # Включите подпроекты.
+add_subdirectory ("almaT/lib")
 add_subdirectory ("almaT")
-#add_subdirectory ("almaT/lib")
